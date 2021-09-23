@@ -1,0 +1,23 @@
+.total-cart{
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.cart-details{
+    text-align: center;
+}
+.total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    
+}
+.total h5{
+    color: red;
+}
+.buy{
+    width: 150px;
+    height: 25px;
+    background-color: goldenrod;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
