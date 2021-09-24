@@ -19,3 +19,10 @@
     border-radius: 5px;
     
 }
+.rating{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.fa-star{
+    color: rgb(255, 208, 0);
+}

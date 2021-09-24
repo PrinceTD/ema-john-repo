@@ -7,14 +7,15 @@ const Cart = (props) => {
     for (const product of cart) {
         total = total + product.price;
     }
-    const shipping = 3.99;
-    const tex = (total + shipping) * 10;
+
+    const shipping = total > 0 ? 10 : 0;
+    const tex = (total + shipping) * 0.10;
     const orderTotal = (total + shipping + tex);
 
     return (
         <div className='total-cart'>
             <div className='cart-details'>
-                <h3>Order Summary:</h3>
+                <h5><strong>Order Summary</strong></h5>
                 <p>Item order: {props.cart.length}</p>
             </div>
             <div>
@@ -31,11 +32,12 @@ const Cart = (props) => {
                     <small>$ {tex.toFixed(2)}</small>
                 </span>
             </div>
+            <br />
             <div className="cart-details">
 
                 <span className='total'>
-                    <h5>Order Total:</h5>
-                    <h5>$ {orderTotal.toFixed(2)}</h5>
+                    <h6>Order Total:</h6>
+                    <h6>$ {orderTotal.toFixed(2)}</h6>
                 </span>
                 <button className="buy"><strong><small>Buy Now</small></strong></button>
             </div>
